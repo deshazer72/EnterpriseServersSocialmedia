@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="Final.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<style>
+
+    body {
+        background-image: url(http://www.bookapp.com/tb/i/tweetbook_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
+
+
+<body>
+<div id="header">
+    <div align="center" style="border:solid; margin-bottom: 4px; font:bold 28px times new roman;">
+        <b>UA Tweetbook</b>
+    </div></div>
+    
+
+
+    <head>
+        <h1>Log In or <a href="CreateUser.html">Create User Profile</a></h1>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+		<script src="login.js"></script>
+        
+    </head>
+    <body>
+        <form action="profile.html" name="myForm2" onsubmit="return Validate()" method="post">
+            <table>
+
+
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="text" name="Email" id="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="text" name="Password" id="Password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+
+                </tr>
+            </table>
+            <div id="afterForm">
+            </div>
+        </form>
+        <br />
+        <br />
+
+        <div>All Fields are Required</div>
+    </body>
+    </html>
+

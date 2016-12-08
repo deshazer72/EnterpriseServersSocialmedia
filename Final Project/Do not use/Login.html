@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="Final.css">
+
+
+
+<div id="header">
+    <div align="center" style="border:solid; margin-bottom: 4px; font:bold 28px times new roman;">
+        <b>UA Tweetbook</b>
+    </div></div>
+    
+
+
+    <head>
+        <h1>Log In or <a href="CreateUser.html">Create User Profile</a></h1>
+        <script>
+            function Validate() {
+                
+                var Email = document.getElementById("Email").value;
+                var Password = document.getElementById("Password").value;
+                var strAfterForm = document.getElementById("afterForm");
+
+               
+                if (Email == "" || Email == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Email is Required </p>'
+                    document.getElementById("Email").focus();
+                    return false;
+                }
+
+                else if (Password == "" || Password == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Password is Required </p>'
+                    document.getElementById("Password").focus();
+                    return false;
+                }
+                else {
+                    alert("Congratulations! Your User Profile has been Created!");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm2" onsubmit="return Validate()" method="post">
+            <table>
+                
+
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="text" name="Email" id="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="text" name="Password" id="Password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input  type="submit" value="Submit" onclick="location.href='Profile.html'">
+                    </td>
+                   
+                </tr>
+            </table>
+            <div id="afterForm">
+            </div>
+        </form>
+        <br />
+        <br />
+
+        <div>All Fields are Required</div>
