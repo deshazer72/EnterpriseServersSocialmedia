@@ -1,0 +1,184 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="Final.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<style>
+    body {
+        background-image: url(http://www.carolinamaterialhandling.com/Fade-background_rot_180.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <div align="center" style="border:solid; margin-bottom: 4px; font:bold 28px times new roman;">
+            <b>UA Tweetbook</b>
+        </div>
+    </div>
+
+    <ul>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="EditProfile.html">Edit Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li style="float:right"><a href="Login.html">Log Off</a></li>
+    </ul>
+
+
+    <head>
+        <h1>Edit User Profile</h1>
+        <script>
+            function Validate() {
+                var Firstname = document.getElementById("Firstname").value;
+                var LastName = document.getElementById("LastName").value;
+                var Address = document.getElementById("Address").value;
+                var City = document.getElementById("City").value;
+                var State = document.getElementById("State").value;
+                var Zip = document.getElementById("Zip").value;
+                var Email = document.getElementById("Email").value;
+               
+                var strAfterForm = document.getElementById("afterForm");
+
+                if (Firstname == "" || Firstname == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> First Name is Required </p>'
+                    document.getElementById("Firstname").focus();
+                    return false;
+                }
+
+                else if (LastName == "" || LastName == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Last Name is Required </p>'
+                    document.getElementById("LastName").focus();
+                    return false;
+                }
+
+                else if (Address == "" || Address == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Address is Required </p>'
+                    document.getElementById("Address").focus();
+                    return false;
+                }
+
+                else if (City == "" || City == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> City is Required </p>'
+                    document.getElementById("City").focus();
+                    return false;
+                }
+
+                else if (State == "" || State == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> State is Required </p>'
+                    document.getElementById("State").focus();
+                    return false;
+                }
+
+                else if (Zip == "" || Zip == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Zip Code is Required </p>'
+                    document.getElementById("Zip").focus();
+                    return false;
+                }
+
+                else if (Email == "" || Email == null) {
+                    strAfterForm.innerHTML = '<p style="color:black;"> Email is Required </p>'
+                    document.getElementById("Email").focus();
+                    return false;
+                }
+
+                
+                
+                else {
+                    alert("Congratulations! Your User Profile has been Created!");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" onsubmit="return Validate()" method="post">
+            <table>
+                <tr>
+                    <td>
+                        *First Name:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="Firstname" id="Firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        *Last Name:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="LastName" id="LastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       *Address:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="Address" id="Address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       *City:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="City" id="City">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        *State:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="State" id="State">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        *Zip:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" name="Zip" id="Zip">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        *Email:
+                    </td>
+                    <td>
+                        <input type="text" name="Email" id="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Change Profile Picture:
+                    </td>
+                    <td>
+                        <input type="file" name="datafile" size="40">
+                    </td>
+                </tr>
+                
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit" onclick="location.href='Profile.html'">
+                    </td>
+                </tr>
+            </table>
+            <div id="afterForm">
+            </div>
+        </form>
+    </body>
+    <br />
+    <br />
+
+    <div>* Required Field</div>
+</body>
+</html>
