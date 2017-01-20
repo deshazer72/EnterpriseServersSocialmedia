@@ -32,7 +32,7 @@
         
     </head>
     <body>
-        <form action="profile.html" name="myForm2" onsubmit="return Validate()" method="post">
+        <form name="myForm2">
             <table>
 
 
@@ -41,7 +41,7 @@
                         Email:
                     </td>
                     <td>
-                        <input type="text" name="Email" id="Email">
+                        <input type="text" name="Email" id="Email" value="">
                     </td>
                 </tr>
                 <tr>
@@ -49,13 +49,13 @@
                         Password:
                     </td>
                     <td>
-                        <input type="text" name="Password" id="Password">
+                        <input type="password" name="Password" id="Password">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <input type="submit" value="Submit">
+                        <button type="button" onclick="Validate()">Submit</button>
                     </td>
 
                 </tr>
